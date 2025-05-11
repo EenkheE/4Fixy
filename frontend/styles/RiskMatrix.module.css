@@ -1,0 +1,88 @@
+@import "./globals.css";
+
+.container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #1a202c);
+  margin-bottom: 1rem;
+}
+
+.matrix {
+  display: inline-block;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.cell {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dee2e6;
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.selected {
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.label {
+  width: 80px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-primary, #2d3748);
+}
+
+.axisLabel {
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  transform: rotate(-90deg);
+  font-size: 0.875rem;
+  color: var(--text-primary, #2d3748);
+}
+
+.bottomLabels {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.bottomLabels .label {
+  flex: 1;
+}
+
+.summary {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--text-primary, #2d3748);
+}
+
+@media (max-width: 640px) {
+  .cell {
+    width: 60px;
+    height: 40px;
+    font-size: 0.75rem;
+  }
+
+  .label {
+    width: 60px;
+    font-size: 0.75rem;
+  }
+
+  .axisLabel {
+    left: -50px;
+  }
+}

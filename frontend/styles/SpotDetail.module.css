@@ -1,0 +1,121 @@
+@import "./globals.css";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color, #f4f4f9);
+  padding: 1.5rem;
+}
+
+.card {
+  background: var(--card-background, #ffffff);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 36rem;
+  width: 100%;
+  padding: 2rem;
+  text-align: left;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary, #1a202c);
+  margin-bottom: 1rem;
+}
+
+.description,
+.coordinates {
+  font-size: 1rem;
+  color: var(--text-secondary, #4a5568);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.description strong,
+.coordinates strong {
+  color: var(--text-primary, #2d3748);
+}
+
+.imageContainer {
+  margin-bottom: 1.5rem;
+}
+
+.image {
+  width: 100%;
+  max-height: 24rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+.noImage {
+  font-style: italic;
+  color: var(--text-muted, #718096);
+  margin-bottom: 0.5rem;
+}
+
+.error {
+  color: var(--error-color, #e53e3e);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.loading {
+  font-size: 1.125rem;
+  color: var(--text-secondary, #4a5568);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color, #3182ce);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-hover, #2b6cb0);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3);
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description,
+  .coordinates {
+    font-size: 0.875rem;
+  }
+
+  .button {
+    width: 100%;
+    padding: 0.625rem;
+  }
+}
