@@ -1,3 +1,34 @@
+# 4Fixy (InfraFix)
+
+A monorepo for reporting broken public infrastructure with photos and map locations.
+
+## Structure
+
+- `frontend/`: Next.js frontend
+- `backend/`: Node.js/Express backend with MongoDB
+
+## Setup
+
+### Frontend
+
+1. Navigate: `cd frontend`
+2. Install: `npm install`
+3. Set `NEXT_PUBLIC_BACKEND_URL` in `frontend/.env.local` (e.g., `http://localhost:5000`)
+4. Run: `npm run dev`
+
+### Backend
+
+1. Navigate: `cd backend`
+2. Install: `npm install`
+3. Set `MONGODB_URI` in `backend/.env` (e.g., `mongodb://localhost:27017/4fixy`)
+4. Run: `npm run dev`
+
+## Features
+
+- Report infrastructure issues with title, description, coordinates, and photos
+- View issues on an interactive map
+- Detailed issue reports with images
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
